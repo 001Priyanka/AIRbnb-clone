@@ -89,7 +89,14 @@ flex: 1;
     opacity:0.2;
     background-color: white;
 }
+/* new page */
 .add-btn{
+    background-color: #fe423d !important;
+    border: none !important;
+}
+
+/* edit page */
+.edit-btn{
     background-color: #fe423d !important;
     border: none !important;
 }
