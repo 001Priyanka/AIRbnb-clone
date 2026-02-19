@@ -50,12 +50,18 @@ app.get("/listings/:id", async(req, res) => {
 });
 
 // create route
-app.post("/listings", async (req, res) => {
-    // let {title, description, price, location, country, image} = req.body;
-   let listing = req.body;
-    console.log(listing);
+// app.post("/listings", async (req, res) => {
+//     // let {title, description, price, location, country, image} = req.body;
+//    let listing = req.body;
+//     console.log(listing);
 
+// });
+app.post("/listings", async (req, res) => {
+    const newListing = new Listing(req.body.listing);
+    await newListing.save();
+    res.redirect("/listings");
 });
+
 
 // edit route
 app.get("/listings/:id/edit", async (req, res) => {
